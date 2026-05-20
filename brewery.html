@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brewery | Caboose Brewing Co.</title>
+  <meta name="description" content="Our Vienna & Fairfax breweries — meet the team, explore our beers, and find out what's on tap at Caboose Brewing Co.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://www.googletagmanager.com/gtag/js?id=G-430TXD9LE1" data-cfasync="false" data-wpfc-render="false" async></script>
+  <style>
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2.5rem;
+    }
+
+    .team-card { text-align: center; }
+
+    .team-card__photo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 1rem;
+      border: 3px solid var(--gold);
+      background: #eee;
+    }
+
+    .team-card__photo-placeholder {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      margin: 0 auto 1rem;
+      border: 3px solid var(--gold);
+      background: #2a2a2a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+    }
+
+    .team-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.15rem;
+      text-transform: uppercase;
+    }
+
+    .team-card__role {
+      font-size: 0.8rem;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-family: 'Oswald', sans-serif;
+      margin-bottom: 0.75rem;
+    }
+
+    .team-card p {
+      font-size: 0.88rem;
+      color: var(--gray-text);
+      line-height: 1.6;
+    }
+
+    .featured-beer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+
+    .featured-beer {
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+      background: var(--white);
+      border: 1px solid var(--gray-mid);
+      border-left: 3px solid var(--gold);
+      padding: 1.25rem;
+    }
+
+    .featured-beer__img {
+      width: 90px;
+      height: 90px;
+      object-fit: cover;
+      flex-shrink: 0;
+      background: #eee;
+    }
+
+    .featured-beer__name {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.05rem;
+      text-transform: uppercase;
+      margin-bottom: 0.2rem;
+    }
+
+    .featured-beer__style {
+      font-size: 0.78rem;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.3rem;
+    }
+
+    .featured-beer__stats {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--gray-text);
+      margin-bottom: 0.5rem;
+    }
+
+    .featured-beer__desc {
+      font-size: 0.85rem;
+      color: var(--gray-text);
+      line-height: 1.5;
+    }
+
+    .award-badge {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.2rem 0.6rem;
+      background: var(--gold);
+      color: var(--white);
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .tap-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 1.5rem;
+    }
+
+    .wort-truck {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      align-items: center;
+    }
+
+    .wort-truck__image { overflow: hidden; min-height: 380px; }
+    .wort-truck__image img { width: 100%; height: 100%; object-fit: cover; }
+    .wort-truck__text { padding: 3.5rem; }
+    .wort-truck__text h2 { margin-bottom: 1rem; }
+    .wort-truck__text p { color: var(--gray-text); }
+
+    @media (max-width: 768px) {
+      .wort-truck { grid-template-columns: 1fr; }
+      .wort-truck__text { padding: 2rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav__inner">
+    <a class="nav__logo" href="index.html">
+      <img src="https://caboosebrewing.com/img/Black-Horizontal-Caboose-Website-Logo-transparentpdf.png" alt="Caboose Brewing Co.">
+    </a>
+    <ul class="nav__links">
+      <li class="nav__item">
+        <a class="nav__link" href="#">Locations</a>
+        <ul class="nav__dropdown">
+          <li><a href="vienna.html">Caboose Tavern – Vienna</a></li>
+          <li><a href="fairfax.html">Caboose Commons – Fairfax</a></li>
+        </ul>
+      </li>
+      <li class="nav__item"><a class="nav__link active" href="brewery.html">Beer</a></li>
+      <li class="nav__item"><a class="nav__link" href="food.html">Food</a></li>
+      <li class="nav__item"><a class="nav__link" href="coffee.html">Coffee</a></li>
+      <li class="nav__item"><a class="nav__link" href="happenings.html">Happenings</a></li>
+      <li class="nav__item"><a class="nav__link" href="private-events.html">Private Events</a></li>
+      <li class="nav__item">
+        <a class="nav__link" href="about.html">About Us</a>
+        <ul class="nav__dropdown">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="awards.html">Awards</a></li>
+        </ul>
+      </li>
+      <li class="nav__item"><a class="nav__store" href="https://gotab.io/ec/caboosetavern" target="_blank" rel="noopener">Store</a></li>
+    </ul>
+    <button class="nav__toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="page-hero__bg" style="background-image:url('https://caboosebrewing.com/img/Four-beers.jpg');"></div>
+  <div class="page-hero__content">
+    <h1>Our Vienna &amp; Fairfax Breweries</h1>
+    <div class="gold-line"></div>
+    <p>Great beer is the cornerstone of Caboose.</p>
+  </div>
+</div>
+
+<!-- TAP LINKS -->
+<section style="background:var(--gold);padding:1.25rem 1.5rem;text-align:center;">
+  <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;align-items:center;">
+    <a class="btn btn--outline" href="https://gotab.io/loc/caboosetavern/menu/beverages" target="_blank" rel="noopener" style="border-color:var(--white);color:var(--white);padding:0.5rem 1.5rem;">Tavern Taps</a>
+    <a class="btn btn--outline" href="https://gotab.io/loc/caboose-commons/menu/beverages" target="_blank" rel="noopener" style="border-color:var(--white);color:var(--white);padding:0.5rem 1.5rem;">Commons Taps</a>
+    <a class="btn btn--outline" href="https://manager.gotab.io/loc/caboosetavern/spot/keg-sales" target="_blank" rel="noopener" style="border-color:var(--white);color:var(--white);padding:0.5rem 1.5rem;">Order a Keg</a>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="section">
+  <div class="container" style="max-width:800px;text-align:center;">
+    <p style="font-family:'Oswald',sans-serif;letter-spacing:0.15em;text-transform:uppercase;font-size:0.8rem;color:var(--gold);">Craft Beer</p>
+    <h2 style="margin-bottom:1rem;">Your Neighborhood Brewery</h2>
+    <div class="gold-line"></div>
+    <p style="margin-top:1.5rem;font-size:1.05rem;color:var(--gray-text);line-height:1.8;">Our brewery team is a skilled group of beer aficionados that love to experiment. Drawing inspiration from traditional styles, seasonal favorites, and new techniques, this group of artists is passionate in their pursuit for delicious beer.</p>
+  </div>
+</section>
+
+<!-- FEATURED BEERS -->
+<section class="section section--gray">
+  <div class="container">
+    <div class="section-header">
+      <h2>Featured Beers</h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="featured-beer-grid">
+
+      <div class="featured-beer">
+        <img class="featured-beer__img" src="https://caboosebrewing.com/img/DSC_0022.jpg" alt="The Fog IPA">
+        <div>
+          <p class="featured-beer__name">The Fog IPA</p>
+          <p class="featured-beer__style">New England Style IPA</p>
+          <p class="featured-beer__stats">7.0% ABV &bull; 42 IBU</p>
+          <p class="featured-beer__desc">Fruity hop character, juicy mouthfeel, citrus notes.</p>
+        </div>
+      </div>
+
+      <div class="featured-beer">
+        <img class="featured-beer__img" src="https://caboosebrewing.com/img/Four-beers.jpg" alt="Vienna, VA Lager">
+        <div>
+          <p class="featured-beer__name">Vienna, VA Lager</p>
+          <p class="featured-beer__style">Vienna Style Lager</p>
+          <p class="featured-beer__stats">5.3% ABV &bull; 22 IBU</p>
+          <p class="featured-beer__desc">Medium body, crisp finish, well balanced. Malt forward, easy drinking Vienna-style lager, perfect for any time of year.</p>
+        </div>
+      </div>
+
+      <div class="featured-beer">
+        <img class="featured-beer__img" src="https://caboosebrewing.com/img/Four-beers.jpg" alt="Citra Session IPA">
+        <div>
+          <p class="featured-beer__name">Citra Session IPA</p>
+          <p class="featured-beer__style">American Session IPA</p>
+          <p class="featured-beer__stats">4.8% ABV &bull; 38 IBU</p>
+          <p class="featured-beer__desc">Light bodied, citra hopped, tropical aromas.</p>
+        </div>
+      </div>
+
+      <div class="featured-beer">
+        <img class="featured-beer__img" src="https://caboosebrewing.com/img/Four-beers.jpg" alt="Surfliner IPA">
+        <div>
+          <p class="featured-beer__name">Surfliner IPA</p>
+          <p class="featured-beer__style">West Coast Style IPA</p>
+          <p class="featured-beer__stats">6.7% ABV &bull; 60 IBU</p>
+          <p class="featured-beer__desc">Brewed with Simcoe, Citra, CTZ and Idaho 7 hops. Bold orange and tropical fruit flavors balanced with a bit of pine and resin.</p>
+        </div>
+      </div>
+
+      <div class="featured-beer">
+        <img class="featured-beer__img" src="https://caboosebrewing.com/img/Four-beers.jpg" alt="Ctrl-Alt-Delete Altbier">
+        <div>
+          <p class="featured-beer__name">Ctrl-Alt-Delete</p>
+          <p class="featured-beer__style">Altbier</p>
+          <p class="featured-beer__stats">5.2% ABV &bull; 35 IBU</p>
+          <p class="featured-beer__desc">A copper-red ale with bold personality. Toasted, caramel-like goodness balanced by a confident hop presence. Fermented with traditional German ale yeast for a smooth, sophisticated character.</p>
+          <span class="award-badge">&#127942; GABF 2025 Gold Medal</span>
+        </div>
+      </div>
+
+      <div class="featured-beer">
+        <img class="featured-beer__img" src="https://caboosebrewing.com/img/Four-beers.jpg" alt="Boxcar Brown Ale">
+        <div>
+          <p class="featured-beer__name">Boxcar Brown Ale</p>
+          <p class="featured-beer__style">Brown Ale</p>
+          <p class="featured-beer__stats">5.0% ABV &bull; 22 IBU</p>
+          <p class="featured-beer__desc">Smooth, robust, hints of rich chocolate, dark fruit notes.</p>
+          <span class="award-badge">&#127942; GABF 2025 Silver Medal</span>
+        </div>
+      </div>
+
+      <div class="featured-beer">
+        <img class="featured-beer__img" src="https://caboosebrewing.com/img/AVFa-T8D-1.jpeg" alt="Bourbon Barrel Aged Fireside Ale">
+        <div>
+          <p class="featured-beer__name">Bourbon Barrel Aged Fireside Ale</p>
+          <p class="featured-beer__style">Barrel Aged Rye Ale</p>
+          <p class="featured-beer__stats">12% ABV &bull; 28 IBU</p>
+          <p class="featured-beer__desc">Notes of vanilla, toasted almond, anise, pink pepper, toffee, and caramel corn.</p>
+          <span class="award-badge">&#127942; 2020 VCBG Cup Gold</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="text-align:center;margin-top:2.5rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+      <a class="btn btn--gold" href="https://gotab.io/loc/caboosetavern/menu/beverages" target="_blank" rel="noopener">Tavern Taps</a>
+      <a class="btn btn--outline-dark" href="https://gotab.io/loc/caboose-commons/menu/beverages" target="_blank" rel="noopener">Commons Taps</a>
+    </div>
+  </div>
+</section>
+
+<!-- SEASONAL BEERS -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Seasonal Offerings</h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="featured-beer-grid">
+
+      <div class="featured-beer">
+        <img class="featured-beer__img" src="https://caboosebrewing.com/img/Four-beers.jpg" alt="Boose Light">
+        <div>
+          <p class="featured-beer__name">Boose Light</p>
+          <p class="featured-beer__style">Light Lager</p>
+          <p class="featured-beer__stats">3.6% ABV</p>
+          <p class="featured-beer__desc">A light and crisp lager with notes of cornflakes and floral hops.</p>
+        </div>
+      </div>
+
+      <div class="featured-beer">
+        <img class="featured-beer__img" src="https://caboosebrewing.com/img/Four-beers.jpg" alt="Bienvenidos Mexican Lager">
+        <div>
+          <p class="featured-beer__name">Bienvenidos</p>
+          <p class="featured-beer__style">Mexican Lager</p>
+          <p class="featured-beer__stats">4.9% ABV</p>
+          <p class="featured-beer__desc">A light-bodied beer with mild bitterness, crisp sweetness, and a hint of salt.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- BREWING TEAM -->
+<section class="section section--dark">
+  <div class="container">
+    <div class="section-header">
+      <h2>Meet the Brewing Team</h2>
+      <div class="gold-line"></div>
+      <p style="color:#bbb;">The skilled scientists and artists behind every pint.</p>
+    </div>
+    <div class="team-grid">
+
+      <div class="team-card">
+        <img class="team-card__photo" src="img/Hector.jpg" alt="Hector Meier">
+        <h3 style="color:var(--white);">Hector Meier</h3>
+        <p class="team-card__role">Director of Brewery Operations</p>
+        <p style="color:#aaa;">A native of Houston who claims New Orleans as his home, Hector brings a diverse brewing background to the Caboose team. He's a sake aficionado but always looks forward to his favorite time of year, Oktoberfest.</p>
+      </div>
+
+      <div class="team-card">
+        <img class="team-card__photo" src="img/Matt-Smith.jpeg" alt="Matt Smith">
+        <h3 style="color:var(--white);">Matt Smith</h3>
+        <p class="team-card__role">Head Brewer &bull; Chief Barrel Aging Officer</p>
+        <p style="color:#aaa;">Washington State native who started brewing when his wife gave him a home brew beer kit for his birthday. He has brewed at a number of Virginia breweries. He enjoys German Style Pilsners and Big Barrel Aged Beers. All around beer enthusiast.</p>
+      </div>
+
+      <div class="team-card">
+        <img class="team-card__photo" src="img/Andy.jpg" alt="Andy Bui">
+        <h3 style="color:var(--white);">Andy Bui</h3>
+        <p class="team-card__role">Brewer &bull; Daredevil</p>
+        <p style="color:#aaa;">A key member of the Caboose brewing team bringing creativity and passion to every batch.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WORT TRUCK -->
+<div class="wort-truck">
+  <div class="wort-truck__image">
+    <img src="img/Wort-Wagon.jpeg" alt="The Wort Truck & Wagon">
+  </div>
+  <div class="wort-truck__text" style="background:var(--black);color:var(--white);">
+    <p style="font-family:'Oswald',sans-serif;letter-spacing:0.15em;text-transform:uppercase;font-size:0.8rem;color:var(--gold);margin-bottom:0.5rem;">Behind the Scenes</p>
+    <h2>The Wort Truck &amp; Wagon</h2>
+    <div class="gold-line" style="margin:0.75rem 0 1.25rem;"></div>
+    <p style="color:#bbb;">The wort truck and wagon have been with us since the summer of 2018, right before we opened Commons. We needed a way to bring the wort (sugar water) from Caboose Tavern in Vienna, VA to Caboose Commons in Fairfax, VA to start the fermenting process in the tanks there.</p>
+    <p style="color:#bbb;margin-top:0.75rem;">The Wort Truck &amp; Wagon were born — and have been a beloved part of the Caboose story ever since.</p>
+  </div>
+</div>
+
+<!-- TESTIMONIALS -->
+<section class="section section--gray">
+  <div class="container">
+    <div class="section-header">
+      <h2>What Our Guests Say</h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="testimonials-grid" style="margin-top:2.5rem;">
+      <div class="testimonial">
+        <p class="testimonial__text">I like this spot. Stopped by here for lunch today while One-Wheeling with a friend on the W&amp;OD trail. You can get to it directly from the trail which is awesome.</p>
+        <p class="testimonial__author">— Saminda</p>
+      </div>
+      <div class="testimonial">
+        <p class="testimonial__text">Come for the delicious beer and stay for the amazing food! Beer speaks for itself but I especially like the IPAs and the Pilsner.</p>
+        <p class="testimonial__author">— Jacob</p>
+      </div>
+      <div class="testimonial">
+        <p class="testimonial__text">Oh man, what an awesome brewery in Fairfax. Great customer service and a huge place, indoors and outdoors. Wide variety of beers and food. I strongly recommend.</p>
+        <p class="testimonial__author">— Oscar</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION FOOTER -->
+<div class="locations-footer">
+  <div class="location-block">
+    <h3>Caboose Tavern</h3>
+    <h4>Vienna, VA</h4>
+    <address>520 Mill Street NE<br>Vienna, VA 22180<br>703-865-8580</address>
+    <dl class="hours">
+      <dt>Mon – Thu</dt><dd>11am – 9pm</dd>
+      <dt>Fri – Sat</dt><dd>8am – 10pm</dd>
+      <dt>Sunday</dt><dd>8am – 9pm</dd>
+    </dl>
+    <p style="font-size:0.78rem;color:#777;margin-top:0.25rem;">*Kitchen closes 30 min early. Open 8am on Holiday Mondays.</p>
+    <div class="social">
+      <a href="https://www.facebook.com/caboosetavern" target="_blank" rel="noopener"><img src="https://caboosebrewing.com/img/logo-icon1.png" alt="Facebook"></a>
+      <a href="https://www.instagram.com/caboosetavern/" target="_blank" rel="noopener"><img src="https://caboosebrewing.com/img/logo-icon2.png" alt="Instagram"></a>
+      <a href="https://twitter.com/CabooseBrewing" target="_blank" rel="noopener"><img src="https://caboosebrewing.com/img/logo-icon3-1.png" alt="Twitter"></a>
+    </div>
+  </div>
+  <div class="location-block">
+    <h3>Caboose Commons</h3>
+    <h4>Fairfax, VA</h4>
+    <address>2918 Eskridge Road<br>Fairfax, VA 22031<br>703-663-8833</address>
+    <dl class="hours">
+      <dt>Sun – Thu</dt><dd>7am – 9pm</dd>
+      <dt>Fri – Sat</dt><dd>7am – 11pm</dd>
+    </dl>
+    <p style="font-size:0.78rem;color:#777;margin-top:0.25rem;">*Kitchen closes 30 min early.</p>
+    <div class="social">
+      <a href="https://www.facebook.com/caboosecommons" target="_blank" rel="noopener"><img src="https://caboosebrewing.com/img/logo-icon1.png" alt="Facebook"></a>
+      <a href="https://www.instagram.com/caboosecommons/" target="_blank" rel="noopener"><img src="https://caboosebrewing.com/img/logo-icon2.png" alt="Instagram"></a>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer__newsletter">
+    <p>Get Caboose Brewing Email Updates</p>
+    <a href="https://forms.fishbowl.com/form/23703e98-323b-41bd-b9a0-d86bc130c58d" target="_blank" rel="noopener">Sign Up for Our Newsletter</a>
+  </div>
+  <nav class="footer__links">
+    <a href="mailto:info@caboosebrewing.com">Contact Us</a>
+    <a href="https://www.indeed.com/cmp/Caboose-Brewing-Company-2/jobs" target="_blank" rel="noopener">Careers</a>
+    <a href="happenings.html">Happenings</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+  </nav>
+  <p class="footer__copy">&copy; 2026 Caboose Brewing Co. All Rights Reserved.</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
