@@ -24,3 +24,9 @@ This repository is a static website for `caboose-www` deployed on Cloudflare.
 - Add new static assets under `img/` and reference them from HTML or CSS.
 - Deployment changes are managed via Cloudflare configuration in `wrangler.jsonc`.
 - For automated workflows, prefer the GitHub MCP server as an integral part of agent-driven PR and deployment planning.
+
+## Modification Requests / Issues List
+
+- Issues are tracked at https://docs.google.com/document/d/1W2weQMBchHYtjDi9AVSQWJu-Zv_F85z_5EyKbszVWQ4/edit?tab=t.0
+- Items that are easily dealt with should be marked as resolved in the google document above.
+- If follow-up or questions about the changes required are needed, a comment within the google document should be used to track the information being requested.
