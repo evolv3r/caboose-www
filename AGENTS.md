@@ -2,7 +2,7 @@
 
 ## Repository overview
 
-This repository is a static website for `caboose-www` deployed on Cloudflare.
+This repository is a static website for `caboose-www` deployed on Cloudflare via github.
 
 ### Source layout
 - Root-level HTML pages: `index.html`, `about.html`, `awards.html`, `brewery.html`, `coffee.html`, `fairfax.html`, `food.html`, `happenings.html`, `privacy-policy.html`, `private-events.html`, `vienna.html`
@@ -16,9 +16,16 @@ This repository is a static website for `caboose-www` deployed on Cloudflare.
 - `assets.directory` is set to `.` so the site is published from the repository root.
 - The project has no build step or package manager files in this repo.
 
+## Preferred MCP Servers / Agents
+- Github CoPilot
+- Claude Code
+- Github MCP Server
+
+
 ## Notes for contributors
 
 - Edit HTML files directly in the repo root for page content changes.
+- It is important to remember that any changes to headers or footers need to be reflect on each page.
 - Update `css/styles.css` for styling changes.
 - Update `js/main.js` for client-side behavior.
 - Add new static assets under `img/` and reference them from HTML or CSS.
