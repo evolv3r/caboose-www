@@ -326,6 +326,13 @@ p:last-child { margin-bottom: 0; }
 .page-hero--commons .page-hero__image {
   object-position: center 60%;
 }
+
+@media (min-width: 1024px) {
+  /* Desktop-only: nudge image down to reveal more building */
+  .page-hero--commons .page-hero__image {
+    object-position: center 80%;
+  }
+}
 .page-hero__content { position: relative; z-index: 1; }
 .page-hero h1 { margin-bottom: 0.5rem; }
 .page-hero p { color: #bbb; font-size: 1.05rem; }
