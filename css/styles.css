@@ -330,7 +330,7 @@ p:last-child { margin-bottom: 0; }
 @media (min-width: 1024px) {
   /* Desktop-only: nudge image down to reveal more building */
   .page-hero--commons .page-hero__image {
-    object-position: center 50%;
+    object-position: center 40%;
   }
 }
 .page-hero__content { position: relative; z-index: 1; }
