@@ -254,17 +254,17 @@ p:last-child { margin-bottom: 0; }
   background-size: cover;
   background-position: center;
   transition: transform 0.4s ease;
-  filter: brightness(1.12);
+  filter: brightness(1.25);
 }
 .hero__panel:hover .hero__panel-bg { transform: scale(1.04); }
 
 .hero__panel-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.45);
+  background: rgba(0,0,0,0.40);
   transition: background 0.3s;
 }
-.hero__panel:hover .hero__panel-overlay { background: rgba(0,0,0,0.35); }
+.hero__panel:hover .hero__panel-overlay { background: rgba(0,0,0,0.30); }
 
 .hero__panel-content {
   position: relative;
