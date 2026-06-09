@@ -331,7 +331,7 @@ p:last-child { margin-bottom: 0; }
 @media (min-width: 1024px) {
   /* Desktop-only: bring the building/logo further toward center */
   .page-hero--commons .page-hero__image {
-    object-position: 70% 60%;
+    object-position: 60% 60%;
   }
 }
 .page-hero__content { position: relative; z-index: 1; }
