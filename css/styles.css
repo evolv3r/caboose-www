@@ -317,6 +317,15 @@ p:last-child { margin-bottom: 0; }
   opacity: 0.3;
 }
 
+/* Page-specific hero tweak for the Commons (Fairfax) to match VS Code preview */
+.page-hero--commons {
+  min-height: 420px;
+  padding: 3rem 1.5rem 2rem;
+}
+
+.page-hero--commons .page-hero__image {
+  object-position: center 60%;
+}
 .page-hero__content { position: relative; z-index: 1; }
 .page-hero h1 { margin-bottom: 0.5rem; }
 .page-hero p { color: #bbb; font-size: 1.05rem; }
