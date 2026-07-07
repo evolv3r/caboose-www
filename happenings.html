@@ -97,12 +97,12 @@
   </div>
 </section>
 
-<section id="events-calendar-preview" class="section" style="display:none;">
+<section class="section">
   <div class="container">
     <div class="section-header">
-      <h2>Upcoming Events Calendar (Preview)</h2>
+      <h2>Upcoming Events Calendar</h2>
       <div class="gold-line"></div>
-      <p>Preview mode only. Add ?elfsightPreview=1 to the URL to view this section before launch.</p>
+      <p>Browse upcoming events at Caboose locations.</p>
     </div>
     <div class="elfsight-app-79cd394e-c163-4fbd-a4aa-1fdeff40c048" data-elfsight-app-lazy style="margin-top:2rem;"></div>
   </div>
@@ -154,23 +154,6 @@
 </footer>
 
 <script src="js/main.js"></script>
-<script>
-  (function () {
-    var params = new URLSearchParams(window.location.search);
-    if (params.get('elfsightPreview') !== '1') {
-      return;
-    }
-
-    var previewSection = document.getElementById('events-calendar-preview');
-    if (previewSection) {
-      previewSection.style.display = 'block';
-    }
-
-    var script = document.createElement('script');
-    script.src = 'https://elfsightcdn.com/platform.js';
-    script.async = true;
-    document.body.appendChild(script);
-  })();
-</script>
+<script src="https://elfsightcdn.com/platform.js" async></script>
 </body>
 </html>
