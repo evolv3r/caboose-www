@@ -136,6 +136,40 @@
       margin-top: 1.5rem;
     }
 
+    .keg-cta {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.35rem;
+      width: min(65px, 20vw);
+      line-height: 1;
+    }
+
+    .keg-cta__icon {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.2s ease;
+    }
+
+    .keg-cta__label {
+      display: block;
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(0.75rem, 2.4vw, 0.9rem);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--white);
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+      line-height: 1;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .keg-cta:hover .keg-cta__icon,
+    .keg-cta:focus-visible .keg-cta__icon {
+      transform: scale(1.02);
+    }
+
     .wort-truck {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -203,9 +237,21 @@
 <!-- TAP LINKS -->
 <section style="background:var(--gold);padding:1.25rem 1.5rem;text-align:center;">
   <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;align-items:center;">
-    <a class="btn btn--outline" href="https://gotab.io/loc/caboosetavern/menu/beverages" target="_blank" rel="noopener" style="border-color:var(--white);color:var(--white);padding:0.5rem 1.5rem;">Tavern Taps</a>
-    <a class="btn btn--outline" href="https://gotab.io/loc/caboose-commons/menu/beverages" target="_blank" rel="noopener" style="border-color:var(--white);color:var(--white);padding:0.5rem 1.5rem;">Commons Taps</a>
-    <a class="btn btn--outline" href="https://gotab.io/loc/caboosetavern/menu/caboose-kegs" target="_blank" rel="noopener" style="border-color:var(--white);color:var(--white);padding:0.5rem 1.5rem;">Order a Keg</a>
+    <a class="keg-cta" href="https://gotab.io/loc/caboosetavern/menu/caboose-kegs" target="_blank" rel="noopener" aria-label="Order a Keg">
+      <svg class="keg-cta__icon" viewBox="0 0 220 300" aria-hidden="true" focusable="false">
+        <g fill="none" stroke="rgba(255,255,255,0.98)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="45" y="28" width="130" height="36"></rect>
+          <rect x="96" y="40" width="28" height="12" rx="6"></rect>
+          <rect x="40" y="64" width="140" height="14" rx="7"></rect>
+          <rect x="45" y="78" width="130" height="72"></rect>
+          <rect x="40" y="150" width="140" height="14" rx="7"></rect>
+          <rect x="45" y="164" width="130" height="72"></rect>
+          <rect x="40" y="236" width="140" height="14" rx="7"></rect>
+          <path d="M45 250v16c0 17 14 31 31 31h68c17 0 31-14 31-31v-16"></path>
+        </g>
+      </svg>
+      <span class="keg-cta__label">Order a Keg</span>
+    </a>
   </div>
 </section>
 
@@ -219,109 +265,21 @@
   </div>
 </section>
 
-<!-- FEATURED BEERS -->
-<section class="section section--gray">
-  <div class="container">
-    <div class="section-header">
-      <h2>Featured Beers</h2>
-      <div class="gold-line"></div>
-    </div>
-    <div class="featured-beer-grid">
-
-      <div class="featured-beer">
-        <img class="featured-beer__img" src="https://caboosebrewing.com/img/DSC_0022.jpg" alt="Fog IPA">
-        <div>
-          <p class="featured-beer__name">Fog IPA</p>
-          <p class="featured-beer__style">New England Style IPA</p>
-          <p class="featured-beer__stats">7.0% ABV &bull; 42 IBU</p>
-          <p class="featured-beer__desc">Fruity hop character, juicy mouthfeel, citrus notes.</p>
-        </div>
-      </div>
-
-      <div class="featured-beer">
-        <img class="featured-beer__img" src="https://caboosebrewing.com/img/Four-beers.jpg" alt="Vienna, VA Lager">
-        <div>
-          <p class="featured-beer__name">Vienna, VA Lager</p>
-          <p class="featured-beer__style">Vienna Style Lager</p>
-          <p class="featured-beer__stats">5.3% ABV &bull; 22 IBU</p>
-          <p class="featured-beer__desc">Medium body, crisp finish, well balanced. Malt forward, easy drinking Vienna-style lager, perfect for any time of year.</p>
-        </div>
-      </div>
-
-      <div class="featured-beer">
-        <img class="featured-beer__img" src="https://caboosebrewing.com/img/Four-beers.jpg" alt="Citra Session IPA">
-        <div>
-          <p class="featured-beer__name">Citra Session IPA</p>
-          <p class="featured-beer__style">American Session IPA</p>
-          <p class="featured-beer__stats">4.8% ABV &bull; 38 IBU</p>
-          <p class="featured-beer__desc">Light bodied, citra hopped, tropical aromas.</p>
-        </div>
-      </div>
-
-      <div class="featured-beer">
-        <img class="featured-beer__img" src="https://caboosebrewing.com/img/Four-beers.jpg" alt="Surfliner IPA">
-        <div>
-          <p class="featured-beer__name">Surfliner IPA</p>
-          <p class="featured-beer__style">West Coast Style IPA</p>
-          <p class="featured-beer__stats">6.7% ABV &bull; 60 IBU</p>
-          <p class="featured-beer__desc">Brewed with Simcoe, Citra, CTZ and Idaho 7 hops. Bold orange and tropical fruit flavors balanced with a bit of pine and resin.</p>
-        </div>
-      </div>
-
-      <div class="featured-beer">
-        <img class="featured-beer__img" src="https://caboosebrewing.com/img/Four-beers.jpg" alt="Ctrl-Alt-Delete Altbier">
-        <div>
-          <p class="featured-beer__name">Ctrl-Alt-Delete</p>
-          <p class="featured-beer__style">Altbier</p>
-          <p class="featured-beer__stats">5.2% ABV &bull; 35 IBU</p>
-          <p class="featured-beer__desc">A copper-red ale with bold personality. Toasted, caramel-like goodness balanced by a confident hop presence. Fermented with traditional German ale yeast for a smooth, sophisticated character.</p>
-          <span class="award-badge">&#127942; GABF 2025 Gold Medal</span>
-        </div>
-      </div>
-
-      <div class="featured-beer">
-        <img class="featured-beer__img" src="https://caboosebrewing.com/img/Four-beers.jpg" alt="Boxcar Brown Ale">
-        <div>
-          <p class="featured-beer__name">Boxcar Brown Ale</p>
-          <p class="featured-beer__style">Brown Ale</p>
-          <p class="featured-beer__stats">5.0% ABV &bull; 22 IBU</p>
-          <p class="featured-beer__desc">Smooth, robust, hints of rich chocolate, dark fruit notes.</p>
-          <span class="award-badge">&#127942; GABF 2025 Silver Medal</span>
-        </div>
-      </div>
-    </div>
+<!-- SEASONAL BEERS -->
+<section class="section">
+  <div class="container" style="text-align:center;">
+    <!-- Elfsight Restaurant Menu | Beer List Copy -->
+    <script src="https://elfsightcdn.com/platform.js" async></script>
+    <div class="elfsight-app-9eb542f0-96a5-4bd9-a151-55d3efe8d936" data-elfsight-app-lazy></div>
   </div>
 </section>
 
-<!-- SEASONAL BEERS -->
-<section class="section">
-  <div class="container">
-    <div class="section-header">
-      <h2>Seasonal Offerings</h2>
-      <div class="gold-line"></div>
-    </div>
-    <div class="featured-beer-grid">
-
-      <div class="featured-beer">
-        <img class="featured-beer__img" src="https://caboosebrewing.com/img/Four-beers.jpg" alt="Boose Light">
-        <div>
-          <p class="featured-beer__name">Boose Light</p>
-          <p class="featured-beer__style">Light Lager</p>
-          <p class="featured-beer__stats">3.6% ABV</p>
-          <p class="featured-beer__desc">A light and crisp lager with notes of cornflakes and floral hops.</p>
-        </div>
-      </div>
-
-      <div class="featured-beer">
-        <img class="featured-beer__img" src="https://caboosebrewing.com/img/Four-beers.jpg" alt="Bienvenidos Mexican Lager">
-        <div>
-          <p class="featured-beer__name">Bienvenidos</p>
-          <p class="featured-beer__style">Mexican Lager</p>
-          <p class="featured-beer__stats">4.9% ABV</p>
-          <p class="featured-beer__desc">A light-bodied beer with mild bitterness, crisp sweetness, and a hint of salt.</p>
-        </div>
-      </div>
-    </div>
+<!-- FEATURED BEERS -->
+<section class="section section--gray">
+  <div class="container" style="text-align:center;">
+    <!-- Elfsight Restaurant Menu | Beer List -->
+    <script src="https://elfsightcdn.com/platform.js" async></script>
+    <div class="elfsight-app-048a023f-b06a-4efd-a8fd-7312216c7825" data-elfsight-app-lazy></div>
   </div>
 </section>
 
@@ -394,10 +352,6 @@
         <p class="testimonial__text">Oh man, what an awesome brewery in Fairfax. Great customer service and a huge place, indoors and outdoors. Wide variety of beers and food. I strongly recommend.</p>
         <p class="testimonial__author">— Oscar</p>
       </div>
-    </div>
-        <div style="text-align:center;margin-top:2.5rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-      <a class="btn btn--gold" href="https://gotab.io/loc/caboosetavern/menu/beverages" target="_blank" rel="noopener">Tavern Taps</a>
-      <a class="btn btn--outline-dark" href="https://gotab.io/loc/caboose-commons/menu/beverages" target="_blank" rel="noopener">Commons Taps</a>
     </div>
   </div>
 </section>
